@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="muC-jZ-yZf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection-->
+        <scene sceneID="xDD-9i-hZz">
+            <objects>
+                <viewController id="riP-iL-L41" customClass="PhotoCollectionViewController" customModule="Codable_and_JSON" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aix-IC-FkZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Collection" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jVf-5l-2BI">
+                                <rect key="frame" x="20" y="44" width="374" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="jVf-5l-2BI" secondAttribute="trailing" id="0UK-g8-N4b"/>
+                            <constraint firstItem="w7f-a4-P0b" firstAttribute="bottom" secondItem="jVf-5l-2BI" secondAttribute="bottom" id="OUm-Il-va5"/>
+                            <constraint firstItem="jVf-5l-2BI" firstAttribute="top" secondItem="w7f-a4-P0b" secondAttribute="top" id="uCp-eb-tKI"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jVf-5l-2BI" secondAttribute="leading" id="xG5-9d-AJh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w7f-a4-P0b"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Collection" id="QXo-cH-Rww"/>
+                    <connections>
+                        <outlet property="displayTextView" destination="jVf-5l-2BI" id="pc1-Ap-sfU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EY7-dQ-h6X" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="794" y="26"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="CsR-7J-a9a">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="muC-jZ-yZf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LD0-u0-XU1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="riP-iL-L41" kind="relationship" relationship="viewControllers" id="s5q-XK-7Ip"/>
+                        <segue destination="fav-V4-N54" kind="relationship" relationship="viewControllers" id="LJf-C6-hkc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDN-gC-hTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="25.637181409295355"/>
+        </scene>
+        <!--Set-->
+        <scene sceneID="Uug-kU-WNu">
+            <objects>
+                <viewController id="fav-V4-N54" customClass="PhotoSetViewController" customModule="Codable_and_JSON" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LHt-T4-0Bv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Set" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="esJ-1S-YNZ">
+                                <rect key="frame" x="20" y="44" width="374" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4tr-U6-38S" firstAttribute="bottom" secondItem="esJ-1S-YNZ" secondAttribute="bottom" id="Iz0-2X-rR6"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="esJ-1S-YNZ" secondAttribute="leading" id="pdr-8K-XFo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="esJ-1S-YNZ" secondAttribute="trailing" id="q1m-2b-4H0"/>
+                            <constraint firstItem="esJ-1S-YNZ" firstAttribute="top" secondItem="4tr-U6-38S" secondAttribute="top" id="rSs-5G-TLs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4tr-U6-38S"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Set" id="amM-Df-13Q"/>
+                    <connections>
+                        <outlet property="displayTextView" destination="esJ-1S-YNZ" id="rXR-kZ-IdF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTe-mn-naq" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="26"/>
+        </scene>
+    </scenes>
+</document>
